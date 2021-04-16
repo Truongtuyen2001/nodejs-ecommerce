@@ -1,0 +1,119 @@
+{
+  "products": [
+    {
+      "categoryId": "1",
+      "name": "Giày nhặt từ bãi rác miền tây nước Nam",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2F3605-TT-G-TR-1.jpg?alt=media&token=f5ae0578-9e1d-4686-9a64-55414ccd62c0",
+      "price": "4.000.000 VNĐ",
+      "description": "",
+      "id": "2"
+    },
+    {
+      "categoryId": "1",
+      "name": "Giày sản xuất tại California",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2Fdd5ffdc52b01d65f8f10.jpg?alt=media&token=5f859b7a-7ab7-469c-9b55-c9ddcaa0f37d",
+      "price": "1.220.000 VNĐ",
+      "description": "",
+      "id": "1"
+    },
+    {
+      "id": "15",
+      "name": "Giày đẹp giành cho bê đê",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2Fgiay-mlb-ny-vang-rep-1.jpg?alt=media&token=92a40dde-1e16-460c-bfaf-625802339d7c",
+      "price": "10.000.000 VNĐ",
+      "description": "",
+      "categoryId": "1"
+    },
+    {
+      "id": "7485",
+      "name": "Sản phẩm thứ 2",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2FUntitled-1-Recovered-Recovered_1.png?alt=media&token=30644b26-3775-4a38-a468-a0437810ef00",
+      "price": "3.000.000 VNĐ",
+      "description": "",
+      "categoryId": "2"
+    },
+    {
+      "name": "Giày Thể Thao XSPORT Van.s Old Skool",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2Fgiay-mlb-ny-vang-rep-1.jpg?alt=media&token=45c63fb8-a880-4389-a473-67fbf757673c",
+      "price": "3.000.000 VNĐ",
+      "categoryId": "1",
+      "description": "",
+      "id": "h0LsZ9j"
+    },
+    {
+      "name": "Giày công chúa 12",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2Fba136a9c44bdce8b552f09d229e0f02b.jpg?alt=media&token=36d9b84e-a726-4e50-bcfc-5ac1530929a1",
+      "price": "3.000.000 VNĐ",
+      "categoryId": "2",
+      "description": "",
+      "id": "OYFg2FX"
+    },
+    {
+      "name": "Giày thượng đình",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2Fgiay-mlb-ny-vang-rep-1.jpg?alt=media&token=2e6dc649-68d1-4bf2-ac03-3111af58a62a",
+      "price": "2.000.000 VNĐ",
+      "categoryId": "2",
+      "description": "",
+      "id": "FSMdfIG"
+    },
+    {
+      "name": "sản phẩm thứ 5",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2F3605-TT-G-TR-1.jpg?alt=media&token=9e6403c7-be30-47ac-938d-9648d136258d",
+      "price": "8.000.000 VNĐ",
+      "categoryId": "2",
+      "id": "3Yw4DpB"
+    },
+    {
+      "name": "guốc nữ cao cấp",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2F59d080ce632ee6136f4ef488130774b0.jpg?alt=media&token=55ba9bcd-b997-4352-b84b-eb2a554c6278",
+      "price": "12.000.000 VNĐ",
+      "categoryId": "2",
+      "id": "UcymKkm"
+    },
+    {
+      "name": "giày nữ cực cute",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2F064197d3983cc0827d623d9f56f2c8ee.jpg?alt=media&token=368cc6bd-5990-4769-8b1a-1a0e7498bf36",
+      "price": "200.000 VNĐ",
+      "categoryId": "2",
+      "id": "HxuUyjr"
+    },
+    {
+      "name": "giày da nam cao cấp",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2F46704818_445274582668659_14080991009364568REWR731520_n.jpg?alt=media&token=a1976e71-5b05-493f-9fe0-983f7d2bdb7e",
+      "price": "1.200.000 VNĐ",
+      "categoryId": "1",
+      "id": "4g19KDg"
+    },
+    {
+      "name": "Sản phẩm thứ 2",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-c2eec.appspot.com/o/images%2F19.PNG?alt=media&token=81249517-9175-4432-9882-31124df59485",
+      "price": "3.000.000 VNĐ",
+      "categoryId": "2",
+      "id": "PjSpmWO"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Giày nam"
+    },
+    {
+      "id": "2",
+      "name": "Giày nữ"
+    }
+  ],
+  "accounts": [
+    {
+      "id": 1,
+      "email": "tuyen@gmail.com",
+      "phoneNumber": "0948394822",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "email": "theanh@gmail.com",
+      "phoneNumber": "0948394822",
+      "password": "12345678"
+    }
+  ]
+}
