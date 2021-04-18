@@ -1,4 +1,5 @@
 import Product from '../models/product';
+// import Categories from '../models/Category';
 import formidable from 'formidable';
 import fs from "fs";
 import _ from 'lodash';
@@ -135,7 +136,8 @@ export const update = (req, res) => {
         product = _.assignIn(product, fields);
         if (file.photo) {
             if (file.photo.size > 100000) {
-                res.status(400).json({
+
+                return res.status(400).json({
                     error: "Ban nen up anh duoi 100000"
                 })
             }
@@ -145,6 +147,7 @@ export const update = (req, res) => {
         }
         product.save((err, data) => {
             if (err) {
+                console.log(err.message);
                 res.status(400).json({
                     error: "Không sửa được sản phẩm"
                 })
@@ -153,3 +156,5 @@ export const update = (req, res) => {
         });
     });
 }
+
+

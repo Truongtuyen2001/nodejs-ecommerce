@@ -90,3 +90,27 @@ export const categoryPage = (req, res) => {
         res.json({ data });
     })
 }
+
+
+export const cateName = (req, res) => {
+    let product = req.product;
+    Category.find({ _id: product.category }, (err, data) => {
+        if (err) {
+            return res.status(400).json({
+                error: "Khong tim thay danh muc"
+            })
+        }
+        res.json({ data })
+    })
+}
+export const productById = (req, res, next, id) => {
+    Product.findById(id).exec((err, product) => {
+        if (err || !product) {
+            return res.status(400).json({
+                err: "Khong tim thay san pham"
+            })
+        }
+        req.product = product;
+        next();
+    })
+}

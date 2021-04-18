@@ -1,0 +1,32 @@
+a{
+    text-decoration: none;
+}
+
+.price{
+    padding: 10px 0;
+}
+
+.product-details__btn{
+display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.product-details__btn a{
+  flex: 0 0 47%;
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  text-align: center;
+  color: black;
+  border: 1px solid red;
+}
+.color{
+    padding: 15px 0;
+}
+.size{
+    padding: 15px 0;
+}
+
+.button{
+    float: left;
+}

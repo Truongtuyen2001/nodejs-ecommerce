@@ -15,7 +15,7 @@ const ProductsPage = {
             <div class="card-body" style="line-height: 50px;">
             <h5 class="card-title" style=" font-weight: bold;font-size: 16px; margin: 30px 0;" >${product.name}</h5>
             <p style="font-weight: bold;color: #eb1f27;font-size: 18px;" class="card-text">${product.price}</p>
-            <a href="/#/products/${product._id}" class="btn btn-primary">Xem thêm</a>
+            <a href="/#/products/${product._id}" class="btn btn-warning">Xem thêm</a>
             </div>
         </div>
     </div>

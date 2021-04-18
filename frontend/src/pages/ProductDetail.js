@@ -4,12 +4,12 @@ import { parseRequestUrl } from './../utils.js';
 
 
 const ProductDetail = {
-  async render() {
+    async render() {
 
-    const { id } = parseRequestUrl();
-    const { data: product } = await ProductAPI.get(id);
+        const { id } = parseRequestUrl();
+        const { data: product } = await ProductAPI.get(id);
 
-    return /*html*/`
+        return /*html*/`
           
         
   
@@ -33,11 +33,11 @@ const ProductDetail = {
                                  </div>
                                
                                  <div class="price">
-                                     <h4>Price:</h4>
-                                      <button class=""><h3> ${product.price}</h3></button>
+                                     <span>Price: ${product.price} <b>VNĐ</b></span>
+                                      
                                  </div>
                                 
-                                 <div class="p-size">
+                                 <div class="size">
                                      <div class="text-3xl">Size:</h4>
                                      <div class="btn-group btn-group-sm">
                                          <button type="button" class="fs-5 text-dark btn btn-outline-warning">S</button>
@@ -46,7 +46,9 @@ const ProductDetail = {
                                          <button type="button" class="fs-5 text-dark btn btn-outline-warning">XL</button>
                                      </div>
                                  </div> 
-                                 <div class="">
+
+
+                                 <div class="color">
                                      <div class="text-3xl">Color:</div>
                                      <div class="btn-group btn-group-sm">
                                          <button type="button" class="btn">White</button>
@@ -56,13 +58,17 @@ const ProductDetail = {
                                      
                                  </div>
                       
-                                
-                                 <div class="row row-small">
-                                  <div class="col-sm-6">
-                                  <button type="submit" name="add-to-cart" value="16066" class="single_add_to_cart_button button alt"><strong>THÊM VÀO GIỎ HÀNG</strong></button>
-                                  </div>
-                                  <button type="submit" name="add-to-cart" value="16066" class="single_add_to_cart_button button alt"><strong>MUA NGAY</strong></button>
-                                 </div>
+ 
+                                 <div class="product-details__btn">
+                                 <a class="add" href="#">
+                                  
+                                   ADD TO CART</a>
+                                 <a class="buy" href="#">
+                                  
+                                   BUY NOW
+                                 </a>
+                               </div>
+                       
                                  
                              </div>
                          </div>
@@ -77,7 +83,7 @@ const ProductDetail = {
 
                  
           `
-  },
-  afterRender() { }
+    },
+    afterRender() { }
 }
 export default ProductDetail;

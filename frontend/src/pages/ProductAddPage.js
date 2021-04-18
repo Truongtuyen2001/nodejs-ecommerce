@@ -21,7 +21,7 @@ const ProductAddPage = {
                   </select>
                   <input type = 'file' id="image" class="form-control my-3 file"  />
                   <p class = "my-2 text-left text-red-600 text-sm errorFile"></p>
-                  <input type="submit" class = "bg-blue-500 p-2 px-4 rounded text-white hover:bg-blue-600 transition cursor-pointer" >
+                  <input type="submit" class = "bg-blue-500 p-2 px-4 rounded text-red hover:bg-blue-600 transition cursor-pointer" >
               </form>
           `
     },

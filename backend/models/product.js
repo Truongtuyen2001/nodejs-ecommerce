@@ -6,11 +6,11 @@ const productSchema = mongoose.Schema({
         type: String,
         strim: true,
         maxLength: 32,
-        required: true
+        // required: true
     },
     description: {
         type: String,
-        required: true,
+        // required: true,
         maxLength: 2000
     },
     price: {
@@ -19,7 +19,7 @@ const productSchema = mongoose.Schema({
     category: {
         type: ObjectId,
         ref: 'Category',
-        required: true
+        // required: true
     },
     photo: {
         data: Buffer,

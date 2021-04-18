@@ -1,14 +1,19 @@
+
 import { axiosClient } from './axiosClient';
 
 const AccountAPI = {
-    login(email,password) {
-        const url = '/accounts?email=tuyen@gmail.com&password=1234567';
-        //post : gửi dữ liệu
-        //get : lấy dữ liệu 
-        //put : sửa dữ liệu
-        //delete : xoá dữ liệu
-        return axiosClient.get(url)
-    }
+    signup(account) {
+        const url = `/singup`;
+        return axiosClient.post(url, account)
+    },
+    signin(account) {
+        const url = `/singin`;
+        return axiosClient.post(url, account)
+    },
+    // signout() {
+    //     const url = `/signout`;
+    //     return axiosClient.get(url)
+    // }
 }
 
 export default AccountAPI;

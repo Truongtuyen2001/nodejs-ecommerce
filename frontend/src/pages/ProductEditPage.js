@@ -1,4 +1,5 @@
 import ProductAPI from '../api/productAPI';
+import CategoryAPI from '../api/categoryAPI';
 import { parseRequestUrl, $ } from '../utils';
 import { uploadFile } from './../helpers/firebase.js';
 
@@ -7,6 +8,9 @@ const ProductEditPage = {
     const { id } = parseRequestUrl();
     console.log(id);
     const { data: product } = await ProductAPI.get(id);
+    const { data: category } = await CategoryAPI.getAll();
+    const { data: cateName } = await ProductAPI.cateName(id);
+    // console.log(cateName.data[0].name)
     console.log(product);
     return /*html*/`
 
@@ -24,7 +28,13 @@ const ProductEditPage = {
     </div>
     <div class="mb-3">
     <label for="product-categoryId" class="form-label">Thể loại</label>
-    <input type="text" class="form-control" id="product-categoryId" value="${product.categoryId}" aria-describedby="emailHelp">
+    <select id="cate">
+      <option value="${product.category}">${cateName.data[0].name}</option>
+      ${(category.categories).map(cate => {
+      return /*html */ `
+          <option value="${cate._id}">${cate.name}</option>
+        `
+    }).join("")}
     
   </div>
   <div class="mb-3">
@@ -58,18 +68,20 @@ const ProductEditPage = {
     // })
     // const { data: product } = await ProductAPI.get(id);
 
-    $('form-update-product').addEventListener('submit', async (e) => {
+    $('#form-update-product').addEventListener('submit', async (e) => {
       e.preventDefault();
-
-      const formData = new FormData();
-      formData.append('name', $('#product-name').value);
-      formData.append('photo', $('#image').files[0]);
-      formData.append('price', $('#product-price').value);
-      formData.append('category', $('#product-categories').value);
-      formData.append('description', $('#product-categories').value);
-      // console.log(product);
-      await ProductAPI.add(formData);
-      window.location.hash = '/';
+      const { id } = parseRequestUrl();
+      const data = new FormData();
+      data.append('name', $('#product-name').value);
+      data.append('photo', $('#product-image').files[0]);
+      data.append('category', $('#cate').value);
+      data.append('price', $('#product-price').value);
+      // data.append('category', $('#product-categories').value);
+      data.append('description', $('#product-categories').value);
+      await ProductAPI.update(id, data);
+      // window.location.hash = "/listproduct"
+      // console.log('alo');
+      // window.location.hash = '/';
     })
   }
 };

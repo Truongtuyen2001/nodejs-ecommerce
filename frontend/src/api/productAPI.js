@@ -18,13 +18,18 @@ const ProductAPI = {
         return axiosClient.delete(url);
     },
     update(id, data) {
+        console.log(data)
         const url = `/product/${id}`;
         return axiosClient.put(url, data);
     },
     getProductByCateID(id) {
         const url = `/categoryPage/${id}`;
         return axiosClient.get(url);
-    }
+    },
+    cateName(id){
+        const url = `/product/cate/${id}`;
+        return axiosClient.get(url);
+    },
 
 }
 export default ProductAPI;

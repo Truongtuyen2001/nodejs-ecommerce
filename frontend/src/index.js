@@ -12,8 +12,8 @@ import ProductEditPage from './pages/ProductEditPage.js';
 import contact from './pages/contact.js';
 import news from './pages/news.js';
 import news1 from './pages/news1.js'
-import login from './pages/login.js';
-import logout from './pages/logout.js';
+import singup from './pages/singup.js';
+import singin from './pages/singin.js';
 
 
 
@@ -24,12 +24,12 @@ const routes = {
     '/category/:id': CategoryPage,
     '/addproducts': ProductAddPage,
     '/listproduct': AdminProductPage,
-    '/editproduct/:id':ProductEditPage,
-    '/contact' : contact,
-    '/news' : news,
-    '/news1' : news1,
-    '/login' : login,
-    '/logout':logout,
+    '/editproduct/:id': ProductEditPage,
+    '/contact': contact,
+    '/news': news,
+    '/news1': news1,
+    '/singup': singup,
+    '/singin': singin,
 
 }
 
@@ -41,6 +41,7 @@ const router = async () => {
     console.log(parseUrl);
     const page = routes[parseUrl] ? routes[parseUrl] : Error404Page;
     $('#header').innerHTML = await Header.render();
+    await Header.afterRender();
     $("#main-content").innerHTML = await page.render();
     await page.afterRender();
 }

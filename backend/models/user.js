@@ -1,29 +1,29 @@
 import mongoose from 'mongoose';
 import crypto from 'crypto';
-import {v1 as uuidv1} from 'uuid';
+import { v1 as uuidv1 } from 'uuid';
 const userSchema = new mongoose.Schema({
     name: {
-    type: String,
-    trim: true,
-    required: true,
-    maxlenght: 32
+        type: String,
+        trim: true,
+        required: true,
+        maxlenght: 32
     },
     email: {
         type: String,
         trim: true,
         required: true,
-        unique : 32
+        unique: 32
     },
-    hashed_password:{
-        type:String,
+    hashed_password: {
+        type: String,
         required: false,
     },
     about: {
-       type: String,
-       trim: true,
+        type: String,
+        trim: true,
     },
-    salt:{
-         type: String,
+    salt: {
+        type: String,
     },
     role: {
         type: Number,
@@ -33,28 +33,28 @@ const userSchema = new mongoose.Schema({
         type: Array,
         default: []
     },
-},{timestamps: true})
+}, { timestamps: true })
 
 userSchema.virtual('password')
-.set(function (password){
-    this.salt = uuidv1()
-    this.hashed_password = this.encrytPassword(password);
-})
+    .set(function (password) {
+        this.salt = uuidv1()
+        this.hashed_password = this.encrytPassword(password);
+    })
 
 userSchema.methods = {
     authenticate: function (plainText) {
         return this.encrytPassword(plainText) === this.hashed_password;
     },
     encrytPassword: function (password) {
-        if(!password) return '';
-        try{
+        if (!password) return '';
+        try {
             return crypto
-               .createHmac('sha1', this.salt)
-               .update(password)
-               .digest('hex')
-            } catch (error) {
-                return "";
-            }
+                .createHmac('sha1', this.salt)
+                .update(password)
+                .digest('hex')
+        } catch (error) {
+            return "";
+        }
     }
 }
 module.exports = mongoose.model("User", userSchema)
