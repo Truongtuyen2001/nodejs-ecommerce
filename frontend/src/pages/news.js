@@ -2,7 +2,7 @@
 const news = {
   async render() {
 
-    return /*html*/`<br>
+    return /*html*/`
         <h2 class="text-center text-3xl">Tin tức nổi bật</h2>
        <div class="container flex justify-around ">
        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center flex justify-around ">
@@ -45,6 +45,9 @@ const news = {
        </div>
      </div>
        </div>
+
+
+       
 
 
        

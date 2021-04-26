@@ -5,24 +5,16 @@ import sessionStorage from '../sessionStorage'
 const singin = {
   render() {
     return /*html*/ `
-             
+              <form id="singIn" class="flex mx-auto justify-center text-center w-25">
+                  <div class="h3 mb-3 font-weight-normal">Đăng nhập</div>
+                  <div class="d-grid gap-3">    
+                      <label for="inputEmail" class="px-10"></label>
+                      <input type="email" id="email" class="form-control" placeholder="Mời bạn nhập email" >
 
-              <form id="singIn" class="flex justify-center text-center w-25">
-              <div>
-
-              <div class="h3 mb-3 font-weight-normal">Đăng nhập</div>
-              <div class="d-grid gap-3">    
-                  <label for="inputEmail" class="px-10"></label>
-                  <input type="email" id="email" class="form-control" placeholder="Mời bạn nhập email" >
-
-                  <label for="inputPassword" class="sr-only"></label>
-                  <input type="password" id="password" class="form-control" placeholder="Mời bạn nhập mật khẩu">
-               </div>
-
-              <button class="btn btn-lg btn-primary btn-block " type="submit">Đăng nhập</button>
-
-              </div>
-                
+                      <label for="inputPassword" class="sr-only"></label>
+                      <input type="password" id="password" class="form-control" placeholder="Mời bạn nhập mật khẩu">
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block " type="submit">Đăng nhập</button>
               </form>
       
         `;
@@ -34,13 +26,13 @@ const singin = {
       const password = $("#password");
 
       if (email.value === "" || password.value === "") {
-        alert("Please fill in the form");
+        alert("Hãy điền vào mẫu này");
       } else {
         const body = {
           password: $("#password").value,
           email: $("#email").value,
         };
-        console.log(body);
+        // console.log(body);
 
         try {
           const response = await AccountAPI.signin(body);
@@ -48,7 +40,7 @@ const singin = {
           window.location.hash = "/";
         } catch (error) {
           var { data } = error.response;
-          console.log(data.error);
+          // console.log(data.error);
           alert(data.error);
         }
       }

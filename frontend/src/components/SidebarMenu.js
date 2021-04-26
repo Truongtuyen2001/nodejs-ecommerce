@@ -1,21 +1,25 @@
 const SidebarMenu = {
     render(){
-       return `  
-       <div class="sidebar-sticky">
+       return /*html*/`  
+       <div class="sidebar-sticky bg-black">
+
        <ul class="nav flex-column">
+
          <li class="nav-item">
            <a class="nav-link active" href="#">
              <span data-feather="home"></span>
-             Dashboard <span class="sr-only">(current)</span>
+             Danh mục <span class="sr-only">(current)</span>
            </a>
          </li>
+
          <li class="nav-item">
            <a class="nav-link" href="#">
              <span data-feather="file"></span>
-             Products
+             Sản phẩm
            </a>
          </li>
-            </ul>
+
+        </ul>
             </div>
          `
     }

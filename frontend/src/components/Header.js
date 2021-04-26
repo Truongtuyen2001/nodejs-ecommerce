@@ -31,8 +31,19 @@ const Header = {
       var admin = "";
 
       var Logout = /*html*/`
-        <a href="/#/singup" type="button" class="btn btn-success me-2">Đăng kí</a>
-        <a href="/#/singin" type="button" class="btn btn-danger">Đăng nhập</a>
+      <li class="nav-item dropdown w-25 nav-link px-2 link-dark fs-5 text" >
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+      <svg xmlns="http://www.w3.org/2000/svg" style="color:black" width="16" height="16" fill="currentColor" class="bi bi-person-circle w-full" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+    </svg>
+      </a>
+      <div class="dropdown-menu">
+        <a href="/#/singup" type="button"class="dropdown-item">Đăng kí</a> 
+        <a href="/#/singin" type="button" class=" dropdown-item">Đăng nhập</a>
+      </div>
+      
+    </li>
                         `;
     }
     // console.log(categories);
@@ -48,8 +59,8 @@ const Header = {
           
         </head>
         <body>  
-      <div class=" bg-info">
-              <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="toggle-menu ">
+              <header class="bg-info  d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-2 border-bottom">
               <a href="/" class=" m-auto d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                     <img src="image/8173724_logo.jpg"width="120px">
               </a>
@@ -82,6 +93,9 @@ const Header = {
         </body>
         </html> 
         
+
+
+        
         `
 
   },
@@ -94,6 +108,14 @@ const Header = {
         window.location.hash = "/";
       })
     }
+
+    // document.addEventListener('scroll', () => {
+    //   if (pageYOffset > 200) {
+    //     document.querySelector('header').classList.add('fixed-top', 'goTop');
+    //   } else {
+    //     document.querySelector('header').classList.remove('fixed-top', 'goTop');
+    //   }
+    // })
   },
 }
 export default Header;

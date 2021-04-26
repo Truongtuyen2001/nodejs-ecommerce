@@ -7,17 +7,23 @@ const CategoryPage = {
         const { id } = parseRequestUrl();
         console.log(id);
         const { data: products } = await ProductAPI.getProductByCateID(id);
+        const { data: category } = await CategoryAPI.getAll();
+        console.log(category);
         console.log(products);
+        const result = (category.categories).filter(categories => categories._id == id).map(cate => {
+            return `${cate.name}`
+        }).join("")
 
 
         return /*html*/`             
                <div class="container">
-               <div class=" row row-cols-4 gap-5 justify-items-center " >
+               <h2 class="container text-center my-4">${result}</h2>
+               <div class=" row row-cols-4 gap-2 justify-items-center " >
                     ${products.data.map(item => {
             return /*html */ `
                         <div class="" style="padding: 10px">
-                        <div class="card text-center" style="height: 400px; text-align:center; padding:5px; width: 360px;">
-                            <div class="px-20" >
+                        <div class="card text-center w-auto "style ="">
+                            <div class="px-10" >
                                 <a href=""> <img src="http://localhost:4000/api/product/photo/${item._id}" width="200px" height="200px" ></a>
                             </div>
                          <div class="card-body" style="line-height: 50px;">

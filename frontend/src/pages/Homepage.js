@@ -14,7 +14,7 @@ const Homepage = {
     </head>
     <body>
         <form action="" id="form-add">
-         <div class="container">
+         <div class="container-fluid ">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -37,171 +37,156 @@ const Homepage = {
           </a>
         </div>
          </div>
+          <main role="main " class="pt-lg-4">
 
-          <main role="main">
-
-          <section class="jumbotron text-center bg-gray-200">
-              <div class="container ">
-                <h1 class=" text-4xl text-red-500">SMARTMEN</h1>
-                <p class="text-green-500">Với sự đa dạng về mẫu mã và phong cách, chất lượng luôn đặt lên hàng đầu, 
-                  cùng với đó là giá cả phải chăng, thương hiệu Giày 
-                  Cao Smartmen ngày càng được nhiều quý khách hàng ưu tiên sử dụng.
-                  Điểm nhấn ấn tượng mà các sản phẩm giày của Smartmen được khách hàng đánh giá cao đó chính là sử dụng công nghệ đế kép, 
-                  giúp tăng 5cm chiều cao mà không lộ dáng hay đau chân khi di chuyển. </p>
-            
+          <div class="container">
+              <div class="row  d-flex gap-3">
+                <div class="col-sm  text-center ">
+                   <img class="w-100 pt-3 px-1 pb-3 shadow-lg p-3 mb-5 bg-body rounded" src="image/mau1.jpg">
+                </div>
+                <div class="col-sm  text-center">
+                <img class="w-100 pt-3 px-1 pb-3 shadow-lg p-3 mb-5 bg-body rounded" src="image/mau1.jpg">
+                </div>
+                <div class="col-sm   text-center">
+                <img class="w-100 pt-3 px-1 pb-3 shadow-lg p-3 mb-5 bg-body rounded" src="image/mau3.jpg">
+                </div>
               </div>
-        </section>
-    
-         <div class="container">
-         <div class="album py-5 bg-light ">
-         <div class="flex justify-around ">
- 
-           <div class="row ">
-             <div class="col-md-4">
-               <div class="card mb-4 box-shadow">
-                 <img class="card-img-top"src='image/37.jpg' alt="Card image cap">
-                 <div class="card-body">
-                   <p class="card-text">Giày Thể Thao XSPORT Ni.ke air force 1 Rep 1:1</p>
-                   <div class="d-flex justify-content-between align-items-center">
-                     <div class="btn-group">
-                       <button type="button" class="btn btn-sm btn-outline-secondary">Xem thêm</button>
-                       
-                     </div>
-                   
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <div class="col-md-4">
-               <div class="card mb-4 box-shadow">
-                 <img class="card-img-top" src="image/20.png" alt="Card image cap">
-                 <div class="card-body">
-                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                   <div class="d-flex justify-content-between align-items-center">
-                     <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Xem thêm</button>
-                     </div>
+        </div>
+              
+        <div class="container ">
+
+            <div class="row w-auto gap-5">
+            <h1 class="fs-4 text text-center gap-5 text-tranform pt-4 text-start">Giày nam</h1>
+              <div class="col border border-gray-400 border-radius text-center" >
+              
+                  <img src="image/14.jpg" alt=""width="100px" class="w-75">
+                  <div class="">
+                        san pham noi bat
+                  </div>
+                  <div class="">
+                       23000000D
+                  </div>
                   
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <div class="col-md-4">
-               <div class="card mb-4 box-shadow">
-                 <img class="card-img-top" src="image/13.jpg" alt="Card image cap">
-                 <div class="card-body">
-                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                   <div class="d-flex justify-content-between align-items-center">
-                     <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Xem thêm</button>
-                     </div>
-                     
-                   </div>
-                 </div>
-               </div>
-             </div>
- 
-             <div class="col-md-4">
-               <div class="card mb-4 box-shadow">
-                 <img class="card-img-top" src="image/14.jpg" alt="Card image cap">
-                 <div class="card-body">
-                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                   <div class="d-flex justify-content-between align-items-center">
-                     <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Xem thêm</button>
-                     </div>
-                   
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <div class="col-md-4">
-               <div class="card mb-4 box-shadow">
-                 <img class="card-img-top"src="image/33.PNG" alt="Card image cap">
-                 <div class="card-body">
-                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                   <div class="d-flex justify-content-between align-items-center">
-                     <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Xem thêm</button>
-                     </div>
-                     
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <div class="col-md-4">
-               <div class="card mb-4 box-shadow">
-                 <img class="card-img-top"src="image/34.jpg" alt="Card image cap">
-                 <div class="card-body">
-                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                   <div class="d-flex justify-content-between align-items-center">
-                     <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Xem thêm</button>
-                     </div>
-                     
-                   </div>
-                 </div>
-               </div>
-             </div>
- 
-             <div class="col-md-4">
-               <div class="card mb-4 box-shadow">
-                 <img class="card-img-top" src="image/35.jpg" alt="Card image cap">
-                 <div class="card-body">
-                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                   <div class="d-flex justify-content-between align-items-center">
-                     <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Xem thêm</button>
-                     </div>
-                    
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <div class="col-md-4">
-               <div class="card mb-4 box-shadow">
-                 <img class="card-img-top" src="image/37.jpg" alt="Card image cap">
-                 <div class="card-body">
-                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                   <div class="d-flex justify-content-between align-items-center">
-                     <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Xem thêm</button>
-                     </div>
-                    
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <div class="col-md-4">
-               <div class="card mb-4 box-shadow">
-                 <img class="card-img-top"src="image/37.jpg" alt="Card image cap">
-                 <div class="card-body">
-                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                   <div class="d-flex justify-content-between align-items-center">
-                     <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Xem thêm</button>
-                     </div>
-                     
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
- 
-         </div>
-        </main>
-    
+              </div>
+
+              <div class="col border border-gray-400 border-radius text-center" >
+                  <img src="image/14.jpg" alt=""width="100px"class="w-75">
+                  <div class="">
+                        san pham noi bat
+                  </div>
+                  <div class="">
+                       23000000D
+                  </div>
+                  
+              </div>
+
+              <div class="col border border-gray-400 border-radius text-center" >
+                  <img src="image/14.jpg" alt=""width="100px"class="w-75">
+                  <div class="">
+                        san pham noi bat
+                  </div>
+                  <div class="">
+                      23000000D
+                  </div>
+                  
+              </div>
+
+              <div class="col border border-gray-400 border-radius text-center" >
+                  <img src="image/14.jpg" alt=""width="100px"class="w-75">
+                  <div class="">
+                        san pham noi bat
+                  </div>
+                  <div class="">
+                      23000000D
+                  </div>
+                 
+              </div>
+              
+          </div>
+        </div>     
+        <div class="container ">
+
+        <div class="row w-auto gap-5">
+        <h1 class="fs-4 text text-center pt-4">Giày nữ</h1>
+          <div class="col border border-gray-400 border-radius text-center" >
+          
+              <img src="image/33.png" alt=""width="100px" class="w-75">
+              <div class="">
+                    san pham noi bat
+              </div>
+              <div class="">
+                   23000000D
+              </div>
+              
+          </div>
+
+          <div class="col border border-gray-400 border-radius text-center" >
+              <img src="image/33.png" alt=""width="100px"class="w-75">
+              <div class="">
+                    san pham noi bat
+              </div>
+              <div class="">
+                   23000000D
+              </div>
+              
+          </div>
+
+          <div class="col border border-gray-400 border-radius text-center" >
+              <img src="image/33.png" alt=""width="100px"class="w-75">
+              <div class="">
+                    san pham noi bat
+              </div>
+              <div class="">
+                  23000000D
+              </div>
+              
+          </div>
+
+          <div class="col border border-gray-400 border-radius text-center" >
+              <img src="image/33.png" alt=""width="100px"class="w-75">
+              <div class="">
+                    san pham noi bat
+              </div>
+              <div class="">
+                  23000000D
+              </div>
+             
+          </div>
+          
+      </div>
+    </div>        
+        <div class="container">
         
- 			
+              <div class="row d-flex gap-3">
+              <h1 class="fs-4 text text-center pt-4">TIN TỨC MỚI NHẤT</h1>
+                  <div class="col border border-gray-400 border-radius text-center ">
+                       <div class="">
+                          <img src="image/tt1.jpg" style="height:250px" class="w-100 pt-3 px-1 pb-3">
+                          
+                       </div>
+                       <p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.</p>
+
+                  </div>
+                  <div class="col border border-gray-400 border-radius text-center ">
+                      <div class="">
+                          <img src="image/tt2.jpg" style="height:250px" class=" w-100 pt-3 px-1 pb-3">
+                      </div>
+                      <p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.</p>
+                  </div>
+                  <div class="col border border-gray-400 border-radius text-center">
+                      <div class="">
+                          <img src="image/tt2.jpg" style="height:250px" class=" w-100 pt-3 px-1 pb-3">
+                      </div>
+                       <p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.</p>
+                  </div>
+            </div>
+        </div>
+</main>    
+      </div>
+      </div>           
       
-      </div>
-      </div>
-                                                       
-          </form>
-          
-          
+    
+          </form> 
     </body>
     </html>
         `

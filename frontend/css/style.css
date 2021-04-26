@@ -30,3 +30,44 @@ display: flex;
 .button{
     float: left;
 }
+.w-full{
+    width: 24px;
+    height: 24px; 
+}
+
+@keyframes menu {
+    0%{
+        top: 30px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1; 
+    }
+}
+
+.goTop{
+    animation: menu .8s;
+    position: fixed;
+}
+.thumbnail {    
+    position:relative;  
+    overflow:hidden;
+}  
+.caption {  
+    position:absolute;  
+    top:0;  
+    right:0;    
+    background:rgba(66, 139, 202, 0.75);    
+    width:100%; 
+    height:100%;    
+    padding:2%; 
+    display: none;  
+    text-align:center;  
+    color:#fff !important;  
+    z-index:2;
+}
+
+
+
+

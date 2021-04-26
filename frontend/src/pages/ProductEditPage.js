@@ -47,7 +47,30 @@ const ProductEditPage = {
        `
   },
   async afterRender() {
-    // const { id } = parseRequestUrl();
+
+
+    $('#form-update-product').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const { id } = parseRequestUrl();
+      const data = new FormData();
+      //thêm trường dữ liệu
+      data.append('name', $('#product-name').value);
+      data.append('photo', $('#product-image').files[0]);
+      data.append('category', $('#cate').value);
+      data.append('price', $('#product-price').value);0
+      // data.append('category', $('#product-categories').value);+
+      data.append('description', $('#product-categories').value);
+      console.log(data)
+      await ProductAPI.update(id, data);
+
+      // window.location.hash = "/listproduct"
+      // console.log('alo');
+      // window.location.hash = '/';
+    })
+  }
+};
+export default ProductEditPage;
+ // const { id } = parseRequestUrl();
     // const { data: product } = await ProductAPI.get(id);
     // $('#form-update-product').addEventListener('submit', async (e) => {
     //   e.preventDefault();
@@ -67,22 +90,3 @@ const ProductEditPage = {
     //   window.location.hash = '/listproduct'
     // })
     // const { data: product } = await ProductAPI.get(id);
-
-    $('#form-update-product').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const { id } = parseRequestUrl();
-      const data = new FormData();
-      data.append('name', $('#product-name').value);
-      data.append('photo', $('#product-image').files[0]);
-      data.append('category', $('#cate').value);
-      data.append('price', $('#product-price').value);
-      // data.append('category', $('#product-categories').value);
-      data.append('description', $('#product-categories').value);
-      await ProductAPI.update(id, data);
-      // window.location.hash = "/listproduct"
-      // console.log('alo');
-      // window.location.hash = '/';
-    })
-  }
-};
-export default ProductEditPage;
