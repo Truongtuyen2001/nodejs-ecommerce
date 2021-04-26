@@ -10,7 +10,8 @@ export const userById = (req, res, next, id) => {
         }
         // console.log(user);
         req.profile = user;
-        next()
+        next();
+
     })
 }
 export const read = (req, res) => {

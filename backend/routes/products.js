@@ -7,15 +7,15 @@ router.post('/product', create);
 
 router.get('/product', list);
 
-router.put('/product/:productId', update)
+router.put('/product/:productId', update);
 
-router.get('/product/:productId', read)
+router.get('/product/:productId', read);
 
-router.delete('/product/:productId', remove)
+router.delete('/product/:productId', remove);
 
 router.param('productId', productById);
 
-router.get('/product/photo/:productId', image)
+// router.get('/product/photo/:productId', image);
 
 
 module.exports = router;

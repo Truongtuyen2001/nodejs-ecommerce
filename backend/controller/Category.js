@@ -51,7 +51,7 @@ export const read = (req, res) => {
 }
 
 export const update = (req, res) => {
-    console.log(req.category);
+    // console.log(req.category);
     const category = req.category;
     category.name = req.body.name;
     category.save((err, data) => {
@@ -59,7 +59,7 @@ export const update = (req, res) => {
             res.status(400).json({
                 error: "Không tồn tại danh mục này"
             })
-        }
+        }+
         res.json({ data })
     })
 }

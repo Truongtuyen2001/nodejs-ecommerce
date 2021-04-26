@@ -36,9 +36,9 @@ const userSchema = new mongoose.Schema({
 }, { timestamps: true })
 
 userSchema.virtual('password')
-    .set(function (password) {
-        this.salt = uuidv1()
-        this.hashed_password = this.encrytPassword(password);
+    .set(function (password) { //0000
+        this.salt = uuidv1(); // sinh ra 1 chuỗi để mã hoá 0000
+        this.hashed_password = this.encrytPassword(password); // pass + salt
     })
 
 userSchema.methods = {
@@ -49,7 +49,7 @@ userSchema.methods = {
         if (!password) return '';
         try {
             return crypto
-                .createHmac('sha1', this.salt)
+                .createHmac('sha1', this.salt)//mã hoá dạng sha1
                 .update(password)
                 .digest('hex')
         } catch (error) {

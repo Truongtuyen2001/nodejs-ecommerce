@@ -22,8 +22,7 @@ const productSchema = mongoose.Schema({
         // required: true
     },
     photo: {
-        data: Buffer,
-        contentType: String
+        type: String,
     },
     shipping: {
         type: Boolean

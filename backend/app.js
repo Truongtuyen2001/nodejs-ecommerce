@@ -19,7 +19,7 @@ app.use(expressValidator());
 //connection
 
 
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.MONGO_URI, {// liên kết đến mongoose
     useNewUrlParser: false,
     useCreateIndex: true
 }).then(() => {
@@ -36,9 +36,9 @@ app.use(morgan('dev'));
 app.use('/api', productRouter);
 app.use('/api', CategoryRouter);
 app.use('/api', authRouter);
-app.use('/api', userRouter)
+app.use('/api', userRouter);
 
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8000 //tạo cổng 
 
 app.listen(port, () => {
     console.log(`Server is running on port : ${port}`);
